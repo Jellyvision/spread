@@ -359,6 +359,7 @@ h4 {
   margin-bottom: 0em;
   width: auto;
   display: block;
+  height: 8em;
 }
 @media (min-width: 200px) {
   /* line 68, ../sass/demo-sass/_primary-demo.sass */
@@ -379,7 +380,7 @@ h4 {
   }
 }
 
-/* line 79, ../sass/demo-sass/_primary-demo.sass */
+/* line 80, ../sass/demo-sass/_primary-demo.sass */
 code {
   color: #f2f2f2;
   font-family: Monaco, monospace;
@@ -392,7 +393,7 @@ code {
 }
 
 @media (min-width: 200px) {
-  /* line 85, ../sass/demo-sass/_primary-demo.sass */
+  /* line 86, ../sass/demo-sass/_primary-demo.sass */
   p {
     font-size: 1.2em;
     line-height: 1.25em;
@@ -403,7 +404,7 @@ code {
   }
 }
 @media (min-width: 1280px) {
-  /* line 85, ../sass/demo-sass/_primary-demo.sass */
+  /* line 86, ../sass/demo-sass/_primary-demo.sass */
   p {
     font-size: 1.2em;
     line-height: 1.25em;
@@ -414,7 +415,7 @@ code {
   }
 }
 
-/* line 93, ../sass/demo-sass/_primary-demo.sass */
+/* line 94, ../sass/demo-sass/_primary-demo.sass */
 ol {
   list-style-type: decimal;
   margin-left: 1.5em;
@@ -424,7 +425,7 @@ ol {
   margin-bottom: 0em;
 }
 
-/* line 98, ../sass/demo-sass/_primary-demo.sass */
+/* line 99, ../sass/demo-sass/_primary-demo.sass */
 ul {
   list-style-type: none;
   margin-top: 0em;
@@ -432,7 +433,7 @@ ul {
   padding-bottom: 0em;
   margin-bottom: 1.5em;
 }
-/* line 102, ../sass/demo-sass/_primary-demo.sass */
+/* line 103, ../sass/demo-sass/_primary-demo.sass */
 ul li.code {
   margin-top: 0em;
   padding-top: 0em;
@@ -440,12 +441,12 @@ ul li.code {
   margin-bottom: 0em;
 }
 
-/* line 105, ../sass/demo-sass/_primary-demo.sass */
+/* line 106, ../sass/demo-sass/_primary-demo.sass */
 b {
   font-weight: bold;
 }
 
-/* line 108, ../sass/demo-sass/_primary-demo.sass */
+/* line 109, ../sass/demo-sass/_primary-demo.sass */
 a {
   text-decoration: none;
   font-weight: 600;
@@ -456,42 +457,42 @@ a {
   -webkit-transition: all 200ms 0;
   transition: all 200ms 0;
 }
-/* line 114, ../sass/demo-sass/_primary-demo.sass */
+/* line 115, ../sass/demo-sass/_primary-demo.sass */
 a:hover {
   color: #ff931e;
   text-shadow: 1px 1px 0px #333333;
   text-shadow: 1px 1px 0px 2px #333333;
 }
 
-/* line 118, ../sass/demo-sass/_primary-demo.sass */
+/* line 119, ../sass/demo-sass/_primary-demo.sass */
 .uppercase {
   text-transform: uppercase;
 }
 
-/* line 121, ../sass/demo-sass/_primary-demo.sass */
+/* line 122, ../sass/demo-sass/_primary-demo.sass */
 .center {
   text-align: center;
   margin: 0 auto;
 }
 
-/* line 125, ../sass/demo-sass/_primary-demo.sass */
+/* line 126, ../sass/demo-sass/_primary-demo.sass */
 .wrapper {
   width: 100%;
   padding: 0 5.5555%;
 }
-/* line 129, ../sass/demo-sass/_primary-demo.sass */
+/* line 130, ../sass/demo-sass/_primary-demo.sass */
 .wrapper.primary {
   background-color: #6d52a0;
 }
-/* line 131, ../sass/demo-sass/_primary-demo.sass */
+/* line 132, ../sass/demo-sass/_primary-demo.sass */
 .wrapper.secondary {
   color: #6d52a0;
 }
-/* line 133, ../sass/demo-sass/_primary-demo.sass */
+/* line 134, ../sass/demo-sass/_primary-demo.sass */
 .wrapper.tertiary {
   background-color: #333333;
 }
-/* line 135, ../sass/demo-sass/_primary-demo.sass */
+/* line 136, ../sass/demo-sass/_primary-demo.sass */
 .wrapper.final {
   color: #A489D9;
   background-color: #6d52a0;
@@ -501,19 +502,19 @@ a:hover {
   margin-bottom: 0em;
 }
 
-/* line 140, ../sass/demo-sass/_primary-demo.sass */
+/* line 141, ../sass/demo-sass/_primary-demo.sass */
 .three-quarters {
   width: 100%;
   margin: 0 auto;
 }
 @media (min-width: 1280px) {
-  /* line 140, ../sass/demo-sass/_primary-demo.sass */
+  /* line 141, ../sass/demo-sass/_primary-demo.sass */
   .three-quarters {
     width: 75%;
   }
 }
 
-/* line 147, ../sass/demo-sass/_primary-demo.sass */
+/* line 148, ../sass/demo-sass/_primary-demo.sass */
 .column.with-trailer {
   margin-top: 0em;
   padding-top: 0em;
@@ -521,7 +522,7 @@ a:hover {
   margin-bottom: 0em;
 }
 @media (max-width: 720px) {
-  /* line 149, ../sass/demo-sass/_primary-demo.sass */
+  /* line 150, ../sass/demo-sass/_primary-demo.sass */
   .column.mobile-wide {
     width: 100%;
   }
