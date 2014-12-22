@@ -1,0 +1,177 @@
+// COLUMN CALCULATOR
+// Takes a single argument the number of desired columns and
+// uses it to calculate column widths, wide classes, and offsets.
+
+=column-calc($columns)
+  $column-width: 100% / $columns
+  .columns-#{$columns}
+    overflow: hidden
+
+    //////////////////////////////////////////////
+
+    // CSS2 - No Media Queries
+    .column
+      width: $column-width
+      min-width: 25%
+
+    // Wides
+    // Iterates up to the number of columns,
+    // multiplying the width incrementally.
+    @for $columns from 1 through $columns
+      .wide-#{$columns}
+        width: $column-width * $columns
+
+    // Offsets
+    // Functions similarly, but passes the resulting value to
+    // margin-left instead of width.
+    @for $columns from 0 through $columns - 1
+      $offset-width: $column-width
+      .offset-#{$columns}
+        margin-left: $offset-width * $columns
+
+    //////////////////////////////////////////////
+
+    // Mobile
+    @media (min-width: 0)
+      .column
+        min-width: 25%
+        @if $columns == 1
+          width: $column-width
+        @else
+          @if $columns <= 8
+            width: $column-width
+            @if $columns % 3 == 0
+              width: $column-width * 3
+          @else
+            width: $column-width * 2
+
+      @if $columns > 1
+        // Wides
+        @for $columns from 1 through $columns / 2
+          .wide-#{$columns * 2 - 1},
+          .wide-#{$columns * 2}
+            width: $column-width * $columns * 2
+            max-width: 100%
+        // Offsets
+        @for $columns from 0 through $columns / 2
+          $offset-width: $column-width
+          .offset-#{$columns * 2 - 1},
+          .offset-#{$columns * 2}
+            margin-left: $offset-width * ($columns * 2 - 2)
+
+      @if $columns > 8
+        // Wides
+        @for $columns from 1 through $columns / 2
+          .wide-#{$columns * 4 - 3},
+          .wide-#{$columns * 4 - 2},
+          .wide-#{$columns * 4 - 1},
+          .wide-#{$columns * 4}
+            width: $column-width * $columns * 4
+            max-width: 100%
+        // Offsets
+        @for $columns from 1 through $columns / 4
+          $offset-width: $column-width
+          .offset-#{$columns * 4 - 3},
+          .offset-#{$columns * 4 - 2},
+          .offset-#{$columns * 4 - 1},
+          .offset-#{$columns * 4}
+            margin-left: $offset-width * ($columns * 4 - 4)
+
+    //////////////////////////////////////////////
+
+    // Tablet
+    @media (min-width: $width-tablet)
+      .column
+        min-width: 12.5%
+        @if $columns == 1
+          width: $column-width
+        @else
+          @if $columns <= 8
+            width: $column-width
+            @if $columns % 3 == 0
+              width: $column-width * 2
+          @else
+            width: $column-width * 2
+            @if $columns % 3 == 0
+              width: $column-width * 2
+
+      @if $columns > 1
+        // Wides
+        @for $columns from 1 through $columns / 2
+          .wide-#{$columns * 2 - 1},
+          .wide-#{$columns * 2}
+            width: $column-width * $columns * 2
+            max-width: 100%
+        // Offsets
+        @for $columns from 0 through $columns / 2
+          $offset-width: $column-width
+          .offset-#{$columns * 2 - 1},
+          .offset-#{$columns * 2}
+            margin-left: $offset-width * ($columns * 2 - 2)
+
+      @if $columns > 8
+        // Wides
+        @for $columns from 1 through $columns / 4
+          .wide-#{$columns * 4 - 3},
+          .wide-#{$columns * 4 - 2},
+          .wide-#{$columns * 4 - 1},
+          .wide-#{$columns * 4}
+            width: $column-width * $columns * 4
+        // Offsets
+        @for $columns from 0 through $columns / 4
+          $offset-width: $column-width
+          .offset-#{$columns * 4 - 3},
+          .offset-#{$columns * 4 - 2},
+          .offset-#{$columns * 4 - 1},
+          .offset-#{$columns * 4}
+            margin-left: 0
+            //margin-left: $offset-width * ($columns * 4 - 4)
+
+    //////////////////////////////////////////////
+
+    // Desktop Small
+    @media (min-width: $width-desktop-small)
+      .column
+        width: $column-width
+
+      @if $columns > 1
+        // Wides
+        @for $columns from 1 through $columns - 1
+          .wide-#{$columns}
+            width: $column-width * $columns
+        // Offsets
+        @for $columns from 0 through $columns - 1
+          $offset-width: $column-width
+          .offset-#{$columns}
+            margin-left: $offset-width * $columns
+
+      @if $columns > 8
+        // Wides
+        @for $columns from 1 through $columns / 2
+          .wide-#{$columns * 2 - 1},
+          .wide-#{$columns * 2}
+            width: $column-width * $columns * 2
+        // Offsets
+        @for $columns from 0 through $columns / 2
+          $offset-width: $column-width
+          .offset-#{$columns * 2 - 1},
+          .offset-#{$columns * 2}
+            margin-left: $offset-width * ($columns * 4 - 4)
+
+    //////////////////////////////////////////////
+
+    // Desktop Large
+    @media (min-width: $width-desktop-large)
+      .column
+        min-width: 0
+
+      @if $columns > 8
+        // Wides
+        @for $columns from 1 through $columns - 1
+          .wide-#{$columns}
+            width: $column-width * $columns
+        // Offsets
+        @for $columns from 0 through $columns - 1
+          $offset-width: $column-width
+          .offset-#{$columns}
+            margin-left: $offset-width * $columns

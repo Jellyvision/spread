@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+  <title>Spread: The Golden Grid System with Compass</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="stylesheets/screen.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,800' rel=
+  'stylesheet' type='text/css'>
+  <script src="GGS.js"></script>
+</head>
+
+<body>
+  <div class="wrapper secondary">
+    <div class="container three-quarters">
+      <div class="columns-1">
+        <img class="logo center" src="images/spread-logo.svg">
+
+        <div class="column center gutter-pad">
+          <h1><span class="highlight uppercase">Spread</span></h1>
+
+          <h2>Based on <a href="http://www.goldengridsystem.com" target=
+          "_blank">The Golden Grid System</a></h2>
+
+          <h2>Implemented with <a href=
+          "http://compass-style.org/reference/compass/typography/vertical_rhythm/"
+          target="_blank">Compass SASS</a></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper primary">
+    <div class="container three-quarters">
+      <div class="columns-1">
+        <div class="column gutter-pad">
+          <h3 class="center">Why a Grid?</h3>
+        </div>
+      </div>
+
+      <div class="columns-2">
+        <!-- Columns -->
+
+        <div class="column mobile-wide">
+          <div class="gutter-pad">
+            <h4>Mobile to Desktop</h4>
+
+            <p>This is a completely responsive, fluid grid system. Rooted in a
+            century of typography and executed through the basic math of the
+            Golden Ratio, consistent behavior of layout elements removes a vast
+            majority of questions pertaining to <b>"how will this look on
+            mobile?"</b></p>
+          </div>
+        </div><!-- Vertical Rhythm -->
+
+        <div class="column mobile-wide">
+          <div class="gutter-pad">
+            <h4>Design to Development</h4>
+
+            <p>The end of communicating in <b>pixels</b> as we know it. Set the
+            font size for the application, the rest is all relative. Columns
+            and baselines - <b>that's all you get.</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper tertiary">
+    <div class="container three-quarters">
+      <div class="columns-1">
+        <div class="column mobile-wide gutter-pad">
+          <h3 class="center">How do I use this?</h3>
+        </div>
+      </div>
+
+      <div class="columns-2">
+        <!-- Columns: Gutters -->
+
+        <div class="column mobile-wide with-trailer">
+          <div class="gutter-pad">
+            <h4>DIV Hierarchy</h4>
+
+            <p>There's a pre-established structure for layout, from highest to
+            lowest level. Any kind of modifications would simply be nested SASS
+            classes pertaining to these structural elements. The structure is
+            fairly simple, and goes in this order:</p>
+
+            <ol>
+              <li>Wrapper</li>
+              <li>Container</li>
+              <li>Column Layout</li>
+              <li>Column</li>
+              <li>Gutter Pad</li>
+            </ol>
+          </div>
+        </div><!-- Columns: Vertical Rhythm -->
+
+        <div class="column mobile-wide with-trailer">
+          <div class="gutter-pad">
+            <h4>Columns & Gutters</h4>
+
+            <p>You can utilize the columns by generating layouts. There's a
+            Sass mixin built in that does all the calculations for you,
+            including <b>offset-x</b> and <b>wide-x</b> classes! Just call the
+            mixin by using:<br>
+            <br>
+            <b>@include column-calculator(x)</b><br>
+            <br>
+            Where X is the number of columns you want. Each column layout e.g.
+            <b>"columns-2"</b>, <b>"columns-4"</b>, etc., exists solely to give
+            style context to a <b>"column"</b> div.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns-2">
+        <!-- Vertical Rhythm: Rhythm Mixin -->
+
+        <div class="column mobile-wide with-trailer">
+          <div class="gutter-pad">
+            <h4>@include <a href=
+            "http://compass-style.org/reference/compass/typography/vertical_rhythm/"
+            target="_blank">vertical-rhythm</a></h4>
+
+            <p>Part of the Compass library, the vertical-rhythm mixin sets
+            vertical padding and margin based on the calculated baseline
+            heights. An example might look like this:</p>
+
+            <ul>
+              <li><code>@include rhythm (0, 0, 1, 0, 16px)</code></li>
+              <li><code>@include rhythm (0, 0, 1, 0, $base-font-size*1.2)</code></li>
+            </ul>
+
+            <p>Each argument in the mixin sets rhythm values in the following
+            order:</p>
+
+            <ol>
+              <li>Margin-Top</li>
+              <li>Padding-Top</li>
+              <li>Padding-Bottom</li>
+              <li>Margin-Bottom</li>
+              <li>Font Size (in pixels)</li>
+            </ol>
+          </div>
+        </div><!-- Vertical Rhythm: Font Size Mixin -->
+
+        <div class="column mobile-wide with-trailer">
+          <div class="gutter-pad">
+            <h4>@include <a href=
+            "http://compass-style.org/reference/compass/typography/vertical_rhythm/#mixin-adjust-font-size-to"
+            target="_blank">adjust-font-size-to</a></h4>
+
+            <p>Rather than calling a <b>font-size</b> for each element, you can
+            just use the <b>adjust-font-size-to</b> mixin to set the font size
+            in pixels and designate its line height relative to the established
+            baseline. An example would look like this:</p>
+
+            <ul>
+              <li><code>@include adjust-font-size-to(16px,1)</code></li>
+              <li><code>@include adjust-font-size-to($base-font-size*1.2,1)</code></li>
+            </ul>
+
+            <p>If you call one of these mixins, <b>vertical-rhythm</b> or
+            <b>adjust-font-size-to</b>, be sure to call them both, even if it's
+            to pass all 0's. This will assure that all page elements are
+            aligned to the <b>baseline grid</b>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns-2">
+        <div class="column mobile-wide with-trailer">
+          <div class="gutter-pad">
+            <h4>Media Queries</h4>
+
+            <p>Break points for various screen sizes are established at 320,
+            640, 1280, and 2560 pixels from mobile to desktop respectively.
+            These sizes are established as variables titled:</p>
+
+            <ul>
+              <li><code>@media (min-width: $width-mobile)</code></li>
+              <li><code>@media (min-width: $width-tablet)</code></li>
+              <li><code>@media (min-width: $width-desktop-small)</code></li>
+              <li><code>@media (min-width: $width-desktop-large)</code></li>
+            </ul>
+
+            <p>You can set these variables to your liking in the
+            <b>_global-elements.sass</b> partial. Be sure that media queries
+            are called in this order from smallest to largest!</p>
+          </div>
+        </div>
+
+        <div class="column mobile-wide with-trailer">
+          <div class="gutter-pad">
+            <h4>Be Patient</h4>
+
+            <p>If you've never used Compass, SASS, or a Grid System before,
+            don't worry. It's sort of tough at first, but just remember that
+            the whole thing is built on a pattern. The more exceptions you make
+            to the pattern, the harder it becomes to maintain. Just be patient
+            and experiment - you'd be surprised what you might find!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper final">
+    <div class="container three-quarters">
+      <div class="columns-1">
+        <div class="column mobile-wide gutter-pad">
+          <h2 class="center">For Jellyvision Lab & ALEX</h2>
+
+          <p class="center">designed & developed by <a href=
+          "http://bit.ly/1wewIjU" target="_blank">Mike Else</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Dedicated to Andy Hass and Evan Jacover, for giving me the greatest job I'll ever have. -->
+</body>
+</html>

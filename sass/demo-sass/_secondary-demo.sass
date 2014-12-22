@@ -1,0 +1,56 @@
+.demo
+  +column-calc(4)
+  +column-calc(8)
+  +column-calc(16)
+
+  background: $primary
+  text-align: center
+
+  .wrapper,
+  .container,
+  .columns-1,
+  .columns-2,
+  .columns-4,
+  .columns-8,
+  .columns-16,
+  .column,
+    display: block
+    background-color: rgba(0,0,0,0.1)
+
+
+  h1
+    font-weight: 300
+    @media (min-width: $width-mobile)
+      +rhythm(0,0,1,0, $base-font-size * 2.75)
+    @media (min-width: $width-tablet)
+      +rhythm(0,0,1,0, $base-font-size * 4)
+    @media (min-width: $width-desktop-small)
+      +rhythm(0,0,1,0, $base-font-size * 6)
+
+  h2
+    font-weight: 600
+    @media (min-width: $width-mobile)
+      +rhythm(0,0,1,0, $base-font-size * 1.3)
+    @media (min-width: $width-tablet)
+      +rhythm(0,0,1,0, $base-font-size * 2)
+    @media (min-width: $width-desktop-small)
+      +rhythm(0,0,1,0, $base-font-size * 2.5)
+
+  h3
+    font-weight: 400
+    @media (min-width: $width-mobile)
+      +rhythm(0,0,2,0, $base-font-size * 1.5)
+    @media (min-width: $width-tablet)
+      +rhythm(0,1,1,0, $base-font-size * 2)
+
+  h4
+    font-weight: 600
+    @media (min-width: $width-mobile)
+      +adjust-font-size-to($base-font-size*1.25, 1)
+      +rhythm(0,1,1,0, $base-font-size*1.25)
+
+  h5
+    @media (min-width: $width-mobile)
+      +adjust-font-size-to(14px, 1)
+      +rhythm(0,1,1,0,14px)
+      background-color: rgba(0,0,0,0.1)

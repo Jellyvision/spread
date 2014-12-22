@@ -1,0 +1,151 @@
++column-calc(1)
++column-calc(2)
+
+$primary: #6d52a0
+$secondary: #333333
+$tertiary: #f2f2f2
+
+$link-static: #ffd939
+$link-hover: #ff931e
+
+html
+  font-family: "Raleway", sans-serif
+
+body
+  @extend .full
+  color: white
+  background-image: url('../images/subtle_white_feathers.png')
+  background-attachment: fixed
+
+h1
+  font-weight: 300
+  @media (min-width: $width-mobile)
+    +adjust-font-size-to($base-font-size * 2.75, 2)
+    +rhythm(0, 0, 1, 0, $base-font-size * 2.75)
+  @media (min-width: $width-tablet)
+    +adjust-font-size-to($base-font-size * 4, 3)
+    +rhythm(0, 0, 1, 0, $base-font-size * 4)
+  @media (min-width: $width-desktop-small)
+    +adjust-font-size-to($base-font-size * 6, 5)
+    +rhythm(0, 0, 1, 0, $base-font-size * 6)
+  span.highlight
+    font-weight: 800
+
+h2
+  font-weight: 600
+  @media (min-width: $width-mobile)
+    +adjust-font-size-to($base-font-size * 1.3, 1)
+    +rhythm(0, 0, 0, 0, $base-font-size * 1.3)
+  @media (min-width: $width-tablet)
+    +adjust-font-size-to($base-font-size * 2, 2)
+    +rhythm(0, 0, 0, 0, $base-font-size * 2)
+  @media (min-width: $width-desktop-small)
+    +adjust-font-size-to($base-font-size * 2.5, 2)
+    +rhythm(0, 0, 0, 0, $base-font-size * 2.5)
+
+h3
+  font-weight: 400
+  @media (min-width: $width-mobile)
+    +adjust-font-size-to($base-font-size * 1.5, 2)
+    +rhythm(0, 0, 2, 0, $base-font-size * 1.5)
+  @media (min-width: $width-tablet)
+    +adjust-font-size-to($base-font-size * 2, 1)
+    +rhythm(0, 0, 1, 0, $base-font-size * 2)
+
+h4
+  font-weight: 600
+  @media (min-width: $width-mobile)
+    +adjust-font-size-to($base-font-size * 1.25, 1)
+    +rhythm(0, 0, 1, 0, $base-font-size * 1.25)
+  @media (min-width: $width-tablet)
+    +adjust-font-size-to($base-font-size * 1.5, 1)
+    +rhythm(0, 0, 1, 0, $base-font-size * 1.5)
+
+h5
+  @media (min-width: $width-mobile)
+    +adjust-font-size-to(14px, 1)
+
+.logo
+  +rhythm (0, 0, 0, 0)
+  width: auto
+  display: block
+  @media (min-width: $width-mobile)
+    height: 12em
+  @media (min-width: $width-tablet)
+    height: 15em
+  @media (min-width: $width-desktop-small)
+    height: 21em
+
+code
+  color: $tertiary
+  font-family: Monaco, monospace
+  +adjust-font-size-to($base-font-size * 0.8, 1)
+  +rhythm(0, 0, 1, 0, $base-font-size * 0.8)
+
+p
+  @media (min-width: $width-mobile)
+    +adjust-font-size-to($base-font-size * 1.2, 1)
+    +rhythm(0, 0, 1, 0, $base-font-size * 1.2)
+  @media (min-width: $width-desktop-small)
+    +adjust-font-size-to($base-font-size * 1.2, 1)
+    +rhythm(0, 0, 1, 0, $base-font-size * 1.2)
+
+ol
+  list-style-type: decimal
+  margin-left: 1.5em
+  +rhythm(0, 0, 0, 0)
+
+ul
+  list-style-type: none
+  +rhythm(0, 0, 0, 1, $base-font-size)
+  li
+    &.code
+      +rhythm(0, 0, 0, 0)
+
+b
+  font-weight: bold
+
+a
+  text-decoration: none
+  font-weight: 600
+  color: $link-static
+  font-weight: bold
+  +single-transition(all, 200ms, ease-in-out, 0)
+  &:hover
+    color: $link-hover
+    +single-text-shadow(1px, 1px, 0px, 2px, $secondary)
+
+.uppercase
+  text-transform: uppercase
+
+.center
+  text-align: center
+  margin: 0 auto
+
+.wrapper
+  width: $width
+  padding: 0 $outer-column
+  @extend .full
+  &.primary
+    background-color: $primary
+  &.secondary
+    color: $primary
+  &.tertiary
+    background-color: $secondary
+  &.final
+    color: #A489D9
+    background-color: $primary
+    +rhythm(0, 2, 1, 0)
+
+.three-quarters
+  width: $width
+  margin: 0 auto
+  @media (min-width: $width-desktop-small)
+    width: $width * 0.75
+
+.column
+  &.with-trailer
+    +rhythm(0, 0, 2, 0, $base-font-size)
+  &.mobile-wide
+    @media (max-width: $width-tablet)
+      width: 100%

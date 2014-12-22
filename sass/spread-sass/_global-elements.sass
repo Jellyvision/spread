@@ -1,0 +1,28 @@
+// Structural Standard
+
+div
+  box-sizing: border-box
+  +rhythm(0, 0, 0, 0)
+  
+body
+  margin: 0
+
+.full
+  width: $width
+  +rhythm(0, 0, 0, 0, $base-font-size)
+
+.wrapper
+  width: $width
+  padding: 0 $outer-column
+
+.container
+  width: $width
+  +rhythm(0, 1, 1, 0, $base-font-size)
+
+.column
+  box-sizing: border-box
+  float: left
+  +rhythm(0, 0, 1, 0, $base-font-size)
+
+.gutter-pad
+  padding: $gutter
