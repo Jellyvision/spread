@@ -1,0 +1,22 @@
+{
+  "name": "spread-ggs",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Jellyvision/spread",
+  "authors": [
+    "Mike Else <melse@jellyvision.com>"
+  ],
+  "description": "A Sass implementation of the Golden Grid System",
+  "main": "sass/spread-sass/_column-calculator.sass",
+  "keywords": [
+    "golden grid system",
+    "sass"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
