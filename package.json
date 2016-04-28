@@ -1,0 +1,23 @@
+{
+  "name": "spread-ggs",
+  "version": "0.1.2",
+  "description": "A Sass implementation of the Golden Grid System",
+  "main": "spread.sass",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jellyvision/spread.git"
+  },
+  "keywords": [
+    "golden grid system",
+    "sass"
+  ],
+  "author": "Mike Else <melse@jellyvision.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jellyvision/spread/issues"
+  },
+  "homepage": "https://github.com/Jellyvision/spread#readme"
+}
