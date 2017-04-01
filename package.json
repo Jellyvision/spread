@@ -1,6 +1,6 @@
 {
   "name": "@jellyvision/spread-ggs",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A Sass implementation of the Golden Grid System",
   "main": "spread.sass",
   "scripts": {
